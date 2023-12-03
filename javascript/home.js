@@ -1,29 +1,51 @@
-   /*   
- cells = document.querySelectorAll(".cell");
-textInfo = document.querySelector(".text_info"); 
-
- cells.forEach(cell => cell.addEventListener("click", functionClique));
-
-function functionClique(e){
-    const TextItemCliquer = e.target.textContent;
-    localStorage.setItem('num', JSON.stringify(TextItemCliquer));
-    if (localStorage.getItem('num')) {
-        const numLocal =  JSON.parse(localStorage.getItem('num'));
+//Changement du Curseur______________________
+const cursor = document.querySelector(".cursor");
+document.addEventListener("mousemove", function(e){
+    cursor.style.cssText = "left: " + e.clientX + "px; top:" + e.clientY + "px;"  ;  
+})
+//___________________FIN_____________________
+// Création du Dark mode_____________________
+// Get the toggle button
+const darkToggle = document.getElementById("dark_mode_toggle");
+darkToggle.addEventListener("click", () => {
+    const sectionColor = document.querySelectorAll(".section_color");
+    const body = document.body;
+    if (body.classList.contains('dark')) {
         
-        textInfo.textContent = numLocal ;
-        }  
-}   */
+        body.classList.add('light');
+        body.classList.remove('dark');
+        for (let i = 0; i < sectionColor.length; i++) {
+            const item = sectionColor[i];
+            item.style.backgroundColor="#000000";  
+        }
+    }else if (body.classList.contains('light')){
 
-const maPromese1 = new Promise((resolve, reject) =>{
-const aleatoire = Math.trunc(Math.random() * 10 + 1)
-if (aleatoire < 5) {
-    resolve("Entre 5 & 1 !");
-}else{
-    reject("Entre 5 & 10 !")
+        body.classList.add('dark');
+        body.classList.remove('light');
+        for (let i = 0; i < sectionColor.length; i++) {
+            const item = sectionColor[i];
+            item.style.backgroundColor="#f3cb22";    
+        }
+    }
+
+})
+/* 
+// Get the user's preference from localStorage
+const darkMode = localStorage.getItem("dark-mode");
+// Check if the user has already chosen a theme
+if (darkMode) {
+  // If yes, apply it to the root element
+  root.classList.add("dark-theme");
 }
-})
-.then((txt) =>{
-    console.log(txt + " good job!");
-}).catch((err)=>{
-    console.error(err + " oh! no");
-})
+// Add an event listener to the toggle button
+toggle.addEventListener("click", () => {
+    // Toggle the dark-theme class on the root element
+    root.classList.toggle("dark-theme");
+    // Store or remove the user's preference in localStorage
+    if (root.classList.contains("dark-theme")) {
+    localStorage.setItem("dark-mode", true);
+  } else {
+    localStorage.removeItem("dark-mode");
+  }
+}); */
+//___________________FIN_____________________

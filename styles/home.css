@@ -1,88 +1,137 @@
-
-*, ::before, ::before{
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+*,
+::before,
+::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  background-color: #f3cb22;
+  color: #f1F1f1;
+  cursor: none;
+}
+body.dark{
+  background-color: #000000 !important;
+  color: #000000 !important;
+}
+body.dark #dark_mode_toggle{
+  background-color: #000000 !important;
+  color: #f3cb22 !important;
+}
+/* Style the toggle button */
+#dark_mode_toggle {
+  padding: 10px; /* Add some space around the button */
+  border: none; /* Remove the border */
+  border-radius: 5px; /* Add some rounded corners */
+  cursor: pointer; /* Change the cursor to a pointer */
 }
 
-header{
-    width: 100%;
-    height: 100vh;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    background-color: #1111;
+/* ___________FIN________________ */
+.cursor {
+  position: fixed;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 45px;
+  height: 45px;
+  z-index: 100;
+  border-radius: 50%;
+  pointer-events: none;
+  border: 3px solid #f3cb22;
+  transform: translate(-50%, -50%);
+  backface-visibility: hidden;
+  transition: transform 0.3s ease-out;
+  box-shadow: rgba(9, 30, 66, 0.25) 0px 4px 8px -2px,
+    rgba(9, 30, 66, 0.08) 0px 0px 0px 1px;
 }
-nav{
-    position: absolute;
-    top: 1rem;
-    display: flex;
-width: 90%;
-height: 3.5rem;
-border-radius: 15px;
-background-color: #1e272e;
-box-shadow: rgba(0, 0, 0, 0.3) 0px 1px 4px;
+.cursor :nth-child(1) {
+  width: 32px;
+  height: 32px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 2px dotted #f1f1f1;
+  z-index: 100;
+  border-radius: 50%;
 }
-.section-header{
-    position: absolute;
-    top: 6rem;
-    width: 90%;
-height: 87vh;
-border-radius: 15px;
-/* background: url(../images/bg_AI_Room.jpg); */
-background-color: rgba(13, 22, 65, 0.532);
-background-size: cover;
-background-repeat: no-repeat;
-background-position: center;
-background-attachment: fixed;
-box-shadow: rgba(0, 0, 0, 0.3) 0px 1px 4px;
+.cursor .cursor_div_deux div {
+  width: 20px;
+  height: 20px;
+  background-color: #f1f1f1;
+  border: 2px solid #f3cb22;
+  box-shadow: rgba(9, 30, 66, 0.25) 0px 4px 8px -2px,
+    rgba(9, 30, 66, 0.08) 0px 0px 0px 1px;
+  z-index: 100;
+  border-radius: 50%;
+}
+
+
+header {
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: #1111;
+}
+nav {
+  position: absolute;
+  top: 1rem;
+  display: flex;
+  justify-content: space-between;
+  width: 90%;
+  height: 3.5rem;
+  border-radius: 15px;
+  background-color: #000000;
+  box-shadow: rgba(0, 0, 0, 0.3) 0px 1px 4px;
+}
+.logo{
+  width: 4rem;
+  cursor: pointer;
+}
+.nom_nav{
+  color: var(--text-color);
+  margin-top: 12px;
+  letter-spacing: 1px;
+  font-family: cursive;
+
+}
+.left_div_nav{
+  width: 33.3%;
+  display: flex;
+  justify-content: start;
+  align-items: center;
+}
+.center_div_nav{
+  width: 33.3%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.right_div_nav{
 display: flex;
-justify-content: center;
+justify-content: end;
 align-items: center;
+width: 33.3%;
+background-color: blue;
 }
-/* .grid{
-    display: grid;
-    grid: repeat(3, 80px) / auto-flow;
-    width: 200px;
-    width: 200px;
-    background-color: #b81243;
-justify-content: center;
-align-items: center;
-border: 2px solid #fff;
-gap: 15px;
+.section-header {
+  position: absolute;
+  top: 6rem;
+  width: 90%;
+  height: 87vh;
+  border-radius: 15px;
+  /* background: url(../images/bg_AI_Room.jpg); */
+   background-color: #000000e7;
+   color: var(--text-color);
+;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-attachment: fixed;
+  box-shadow: rgba(0, 0, 0, 0.3) 0px 1px 4px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
-.cell{
-color: #fff;
-width: 50px;
-height: 50px;
-border: 1px solid #fff;
-background-color: black;
-display: flex;
-justify-content: center;
-align-items: center;
-cursor: pointer;
-}
-.text_info{
-position: absolute;
-top: 8%;
-width: 90px;
-height: 90px;
-border-radius: 50%;
-color: #fff;
-background-color: #b81243;
-border: 1px dashed #fff;
-display: flex;
-justify-content: center;
-align-items: center;
-font-size: 40px;
-font-weight: 700;
-} */
-.btn{
-    width: 3rem;
-    height: 2rem;
-}
-@media screen and (max-width: 768px){
-   
-}
-   
