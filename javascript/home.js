@@ -1,34 +1,40 @@
 //Changement du Curseur______________________
 const cursor = document.querySelector(".cursor");
-document.addEventListener("mousemove", function(e){
-    cursor.style.cssText = "left: " + e.clientX + "px; top:" + e.clientY + "px;"  ;  
-})
+document.addEventListener("mousemove", function (e) {
+  cursor.style.cssText = "left: " + e.clientX + "px; top:" + e.clientY + "px;";
+});
 //___________________FIN_____________________
 // Création du Dark mode_____________________
 // Get the toggle button
-const darkToggle = document.getElementById("dark_mode_toggle");
+const darkToggle = document.querySelector(".dark_mode_toggle");
+
 darkToggle.addEventListener("click", () => {
-    const sectionColor = document.querySelectorAll(".section_color");
-    const body = document.body;
-    if (body.classList.contains('dark')) {
-        
-        body.classList.add('light');
-        body.classList.remove('dark');
-        for (let i = 0; i < sectionColor.length; i++) {
-            const item = sectionColor[i];
-            item.style.backgroundColor="#000000";  
-        }
-    }else if (body.classList.contains('light')){
-
-        body.classList.add('dark');
-        body.classList.remove('light');
-        for (let i = 0; i < sectionColor.length; i++) {
-            const item = sectionColor[i];
-            item.style.backgroundColor="#f3cb22";    
-        }
+  const sectionColor = document.querySelectorAll(".section_color");
+  const body = document.body;
+  if (body.classList.contains("dark")) {
+    body.classList.add("light");
+    body.classList.remove("dark");
+    for (let i = 0; i < sectionColor.length; i++) {
+      const item = sectionColor[i];
+      item.style.backgroundColor = "#000000";
     }
-
-})
+  } else if (body.classList.contains("light")) {
+    body.classList.add("dark");
+    body.classList.remove("light");
+    for (let i = 0; i < sectionColor.length; i++) {
+      const item = sectionColor[i];
+      item.style.backgroundColor = "#f3cb22";
+    }
+  }
+});
+// ______________________FIN_____________________________
+// Création du menu burger
+const toggleLogo = document.querySelector(".toggle-logo");
+const logoMenu = document.querySelector(".logo-menu");
+const menu = document.querySelector(".menu");
+toggleLogo.addEventListener("click", () => {
+  menu.classList.toggle("active");
+});
 /* 
 // Get the user's preference from localStorage
 const darkMode = localStorage.getItem("dark-mode");

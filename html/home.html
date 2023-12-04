@@ -1,38 +1,87 @@
 <!DOCTYPE html>
 <html lang="fr">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Home</title>
-    <link rel="stylesheet" href="../styles/home.css">
-</head>
-<body class="light">
-<span class="cursor">
-    <div class="cursor_div_deux"><div></div></div>
-</span>
-<div class="container">
-    <header>
+    <link rel="stylesheet" href="../styles/home.css" />
+  </head>
+  <body class="light">
+    <span class="cursor">
+      <div class="cursor_div_deux"><div></div></div>
+    </span>
+    <div class="container">
+      <div class="menu">
+        <div class="header-menu">
+          <img
+            class="logo-menu"
+            src="../images/burger_sans_bg.gif "
+            alt="image du Logo Awal Portfolio"
+          />
+          <h2 class="nom_menu">Awal Massaoudou</h2>
+        </div>
+        <div class="body-menu">
+          <ul>
+            <li><a href="../html/home.html">Accueil</a></li>
+            <li><a href="#a-propos">A propos</a></li>
+            <li><a href="#competences">Compétences</a></li>
+            <li><a href="#projets">Portfolio</a></li>
+            <li><a href="#quiz">Quiz</a></li>
+            <li><a href="#Contact">Contact Moi</a></li>
+          </ul>
+        </div>
+        <div class="div-quiz-menu">
+            <h2>Jouer au quiz</h2>
+            <img src="../images/" alt="">
+        </div>
+        <div class="footer-menu">
+          <a href="#"><img class="icone-social icone-github" src="../images/github.png" alt="" /></a>
+          <a href="#"><img class="icone-social icone-linkedin" src="../images/linkedin.png" alt="" /></a>
+          <a href="#"><img class="icone-social icone-twitter" src="../images/twitter.png" alt="" /></a>
+          <a href="#"><img class="icone-social icone-facebook" src="../images/facebook.png" alt="" /></a>
+          <a href="#"><img class="icone-social icone-whatsapp" src="../images/whatsapp.png" alt="" /></a>
+        </div>
+      </div>
+      <header>
         <nav class="section_color">
-            <div class="left_div_nav">
-           <img class="logo" src="../images/burger_sans_bg.gif " alt="image du Logo Awal Portfolio">
-        </div>
-        <div class="center_div_nav">
-           <h2 class="nom_nav">Awal Massaoudou</h2>
-        </div>
-           <div class="right_div_nav">
-            <button id="dark_mode_toggle">Toggle Dark Mode</button>
-           </div>
+          <div class="left_div_nav">
+            <img
+              class="logo toggle-logo"
+              src="../images/burger_sans_bg.gif "
+              alt="image du Logo Awal Portfolio"
+            />
+          </div>
+          <div class="center_div_nav">
+            <h2 class="nom_nav">Awal Massaoudou</h2>
+          </div>
+          <div class="right_div_nav">
+            <div class="box">
+            <input class="dark_mode_toggle" id="checkbox" name="checkbox" type="checkbox">
+            <label class="label" for="checkbox">
+                      </label>
+                    </div>
+          </div>
         </nav>
         <section class="section-header section_color">
-         <p></p>
-         Lorem ipsum dolor sit, amet consectetur adipisicing elit. Distinctio maiores ipsum eligendi, nulla deleniti ab iusto magni fuga incidunt veritatis sunt repellat aspernatur vitae dolore. Sequi consequatur perspiciatis debitis libero.
-         Lorem ipsum dolor sit, amet consectetur adipisicing elit. Distinctio maiores ipsum eligendi, nulla deleniti ab iusto magni fuga incidunt veritatis sunt repellat aspernatur vitae dolore. Sequi consequatur perspiciatis debitis libero.
-         Lorem ipsum dolor sit, amet consectetur adipisicing elit. Distinctio maiores ipsum eligendi, nulla deleniti ab iusto magni fuga incidunt veritatis sunt repellat aspernatur vitae dolore. Sequi consequatur perspiciatis debitis libero.
-           
+          <p></p>
+          Lorem ipsum dolor sit, amet consectetur adipisicing elit. Distinctio
+          maiores ipsum eligendi, nulla deleniti ab iusto magni fuga incidunt
+          veritatis sunt repellat aspernatur vitae dolore. Sequi consequatur
+          perspiciatis debitis libero. Lorem ipsum dolor sit, amet consectetur
+          adipisicing elit. Distinctio maiores ipsum eligendi, nulla deleniti ab
+          iusto magni fuga incidunt veritatis sunt repellat aspernatur vitae
+          dolore. Sequi consequatur perspiciatis debitis libero. Lorem ipsum
+          dolor sit, amet consectetur adipisicing elit. Distinctio maiores ipsum
+          eligendi, nulla deleniti ab iusto magni fuga incidunt veritatis sunt
+          repellat aspernatur vitae dolore. Sequi consequatur perspiciatis
+          debitis libero.
         </section>
-    </header>
-</div>
-<script src="../javascript/home.js"></script>
-</body>
+      </header>
+      <div class="div-section-about">
+        <section class="section-about"></section>
+      </div>
+    </div>
+    <script src="../javascript/home.js"></script>
+  </body>
 </html>
